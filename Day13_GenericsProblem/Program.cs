@@ -3,37 +3,21 @@ public class program
 {
     public static void Main(string[] args)
     {
-        //Checking the maximum integer
-        Console.WriteLine("Enter the first number");
-        int first_number = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Enter the second number");
-        int second_number = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Enter the third number");
-        int third_number = Convert.ToInt32(Console.ReadLine());
-        UC1_FindMaximumInteger findmax = new UC1_FindMaximumInteger();
-        if (findmax.Getmaximum(first_number, second_number, third_number) != 0)
-            Console.WriteLine("{0} is Maximum out of {1} ,{2}, {3}", findmax.Getmaximum(first_number, second_number, third_number), first_number, second_number, third_number);
-        //checking maximum float number
-        Console.WriteLine("Enter the first number");
-        Double firstValue = Convert.ToDouble(Console.ReadLine());
-        Console.WriteLine("Enter the second number");
-        Double secondValue = Convert.ToDouble(Console.ReadLine());
-        Console.WriteLine("Enter the third number");
-        Double thirdValue = Convert.ToDouble(Console.ReadLine());
-        UC1_FindMaximumInteger maxFloat = new UC1_FindMaximumInteger();
-        if (maxFloat.MaximumFloatNumber(firstValue, secondValue, thirdValue) != 0)
-            Console.WriteLine("{0} is Maximum out of {1} ,{2}, {3}", maxFloat.MaximumFloatNumber(firstValue, secondValue, thirdValue), firstValue, secondValue, thirdValue);
-       //checking maximum string number
-        Console.WriteLine("Enter the first word");
-        string firstString = Convert.ToString(Console.ReadLine());
-        Console.WriteLine("Enter the second word");
-        string secondString = Convert.ToString(Console.ReadLine());
-        Console.WriteLine("Enter the third word");
-        String thirdString= Convert.ToString(Console.ReadLine());
-        UC1_FindMaximumInteger maxString = new UC1_FindMaximumInteger();
-        if (maxString.MaximumStringNumber(firstString, secondString, thirdString) != null)
-            Console.WriteLine("{0} is Maximum out of {1} ,{2}, {3}", maxFloat.MaximumStringNumber(firstString, secondString, thirdString), firstString, secondString, thirdString);
-            
+        //int[] intArray = { 34, 40, 89 };
+        //double[] doubleArray = { 55.76, 67.02, 78.12 };
+        //string[] stringArray = { "H","E", "L", "L", "O" };
+        //genericmethod.toPrint<int>(intArray);
+        //genericmethod.toPrint<double>(doubleArray);
+
+        //genericmethod.toPrint<string>(stringArray);
+        int maxInt = genericmethod.GetMaximum<int>(67, 29, 83);
+        double maxFloat = genericmethod.GetMaximum<double>(56.7f, 96.4f, 75.7f);
+        string maxString = genericmethod.GetMaximum<string>("Driver", "Pilot", "Engineer");
+
+        Console.WriteLine(maxInt);
+        Console.WriteLine(maxFloat);
+        Console.WriteLine(maxString);
+
     }
 }
 
